@@ -29,7 +29,7 @@ int FillClient(FILE *F, client *c)
 
 void PrintClient(FILE *F, client c)
 {
-    fprintf(F, "%lld %s %s %s\n", c.id, c.nom, c.prenom);
+    fprintf(F, "%lld %s %s\n", c.id, c.nom, c.prenom);
 }
 
 
