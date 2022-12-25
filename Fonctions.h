@@ -14,7 +14,7 @@ typedef struct product
 
 typedef struct client
 {
-    long long int id, num_tel;
+    long long int id;
     char nom[50], prenom[50];
 } client;
 
