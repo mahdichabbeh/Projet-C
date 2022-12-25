@@ -30,5 +30,14 @@ int WriteClient(FILE *F, client *c);
 void PrintClient(FILE *F, client c);
 int ProductExist(long long int id_product);
 int QteAvailable(long long int id_product, int qte);
-
+void AddClient();
+void AddProduct();
+void MakeBill();
+void ShowFacture();
+void ShowClients();
+void ShowProducts();
+void ShowBills();
+void ShowBillsByDate();
+void DelClient();
+void DelProduct();
 

@@ -47,3 +47,59 @@ void ShowClients()
 
     fclose(F);
 }
+
+void ShowProducts()
+{
+    FILE *F;
+    F = fopen(PRODUCT_FILE, "rt");
+    product p;
+    int k = 0;
+    while (FillProduct(F, &p) != -1)
+    {
+        k++;
+        printf("\nProduct %d ____________________________________________", k);
+        printf("\n\nID: %lld\nDesignation: %s\nLa Quantite: %d\n", p.code, p.designation, p.qte );
+        printf("______________________________________________________\n\n");
+    }
+    fclose(F);
+}
+
+void ShowBills()
+{
+    FILE *F;
+    F = fopen(FACTURE_FILE, "rt");
+    facture f;
+    int k = 0;
+    while (FillFacture(F, &f) != -1)
+    {
+        k++;
+        printf("\nFacture %d:____________________________________________", k);
+        printf("\n\nNumero de Facture: %lld\nID de client: %lld\nMois: %d\nAnnee: %d\n", f.Nfacture, f.id_client, f.mois, f.annee);
+        printf("______________________________________________________\n\n");
+    }
+    fclose(F);
+}
+
+void ShowBillsByDate()
+{
+    int month, year;
+    printf("Entrer l'annee: ");
+    scanf("%d", &year);
+    printf("Entrer le mois: ");
+    scanf("%d", &month);
+    FILE *F;
+    facture f;
+    F = fopen(FACTURE_FILE, "rt");
+    int k = 0;
+    while (FillFacture(F, &f) != -1)
+    {
+        if (f.annee == year && f.mois == month)
+        {
+            k++;
+            printf("\nFacture %d:____________________________________________", k);
+            printf("\n\nNumero de Facture: %lld\nID de client: %lld\nMois: %d\nAnnee: %d\n", f.Nfacture, f.id_client, f.mois, f.annee);
+            printf("______________________________________________________\n\n");
+        }
+    }
+}
+
