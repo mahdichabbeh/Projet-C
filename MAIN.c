@@ -2,7 +2,13 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-#include"fonctions.h"
+#include "Fonctions.h"
+#include "add_funct.c"
+#include "affich_func.c"
+#include "Fonctions.c"
+#include "verif_func.c"
+#include "del_func.c"
+
 
 void Choose()
 {

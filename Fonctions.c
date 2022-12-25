@@ -2,7 +2,7 @@
 #include<conio.h>
 #include"fonctions.h"
 
-int WriteProduct(FILE *F, product *p)
+int FillProduct(FILE *F, product *p)
 {
     return fscanf(F, "%lld %s %d ", &(p->code), p->designation, &(p->qte));
 }
@@ -12,7 +12,7 @@ void PrintProduct(FILE *F, product p)
     fprintf(F, "%lld %s %d \n", p.code, p.designation, p.qte);
 }
 
-int WriteFacture(FILE *F, facture *f)
+int FillFacture(FILE *F, facture *f)
 {
     return fscanf(F, "%lld %lld %d %d", &(f->Nfacture), &(f->id_client), &(f->mois), &(f->annee));
 }
@@ -22,7 +22,7 @@ void PrintFacture(FILE *F, facture f)
     fprintf(F, "%lld %lld %d %d\n", f.Nfacture, f.id_client, f.mois, f.annee);
 }
 
-int WriteClient(FILE *F, client *c)
+int FillClient(FILE *F, client *c)
 {
     return fscanf(F, "%lld %s %s %s", &(c->id), c->nom, c->prenom);
 }

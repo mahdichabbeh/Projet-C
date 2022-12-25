@@ -11,7 +11,7 @@ int ProductExist(long long int id_product)
     FILE *F;
     product p;
     F = fopen(PRODUCT_FILE, "rt");
-    while (WriteProduct(F, &p) != -1)
+    while (FillProduct(F, &p) != -1)
     {
         if (p.code == id_product)
         {

@@ -24,11 +24,11 @@ typedef struct facture
     int mois, annee;
 } facture;
 
-int WriteProduct(FILE *F, product *p);
+int FillProduct(FILE *F, product *p);
 void PrintProduct(FILE *F, product p);
-int WriteFacture(FILE *F, facture *f);
+int FillFacture(FILE *F, facture *f);
 void PrintFacture(FILE *F, facture f);
-int WriteClient(FILE *F, client *c);
+int FillClient(FILE *F, client *c);
 void PrintClient(FILE *F, client c);
 int ProductExist(long long int id_product);
 int QteAvailable(long long int id_product, int qte);
@@ -44,4 +44,4 @@ void DelClient();
 void DelProduct();
 int Unstock(long long int id_produit, int qte);
 
-#endif 
+#endif
