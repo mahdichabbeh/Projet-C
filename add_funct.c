@@ -12,42 +12,42 @@ typedef int bool;
 void AddClient()
 {
     FILE *F;
-    client c, temp;
-    char *instruction;
-    instruction = "Entrer le ID du Client: ";
-    do
-    {
-        printf("%s", instruction);
-        scanf("%lld", &(c.id));
-        instruction = "Error d'entree\nEntrer une autre ID: ";
-    } while (c.id <= 0);
-    bool Found = false;
+    FILE *G;
+    client p, temp;
+    bool found = false;
+    printf("Entrer l id du client: ");
+    scanf("%lld", &(temp.id));
     F = fopen(CLIENT_FILE, "rt");
-    if (F != NULL)
+    G = fopen(INTER_FILE, "wt");
+    while (FillClient(F, &p) != -1)
     {
-        while (FillClient(F, &temp) != -1)
+        if (p.id == temp.id)
         {
-            if (c.id == temp.id)
-            {
-                printf("CLIENT:ALREADY_EXISTS!\n");
-                Found = true;
-                break;
-            }
+            printf("CLIENT:ALREADY_EXISTS!\n ");
+            found = true;
         }
+        PrintClient(G, p);
     }
-    if (!Found)
+    if (!found)
     {
-        getchar();
-        fclose(F);
-        F = fopen(CLIENT_FILE, "a");
         printf("Entrer le Nom: ");
-        gets(c.nom);
+        scanf("%s", temp.nom);
         printf("Entrer le Prenom: ");
-        gets(c.prenom);
-        PrintClient(F, c);
-        printf("DONE!\n");
+        scanf("%s", &(temp.prenom));
+        PrintClient(G, temp);
     }
     fclose(F);
+    fclose(G);
+    F = fopen(CLIENT_FILE, "wt");
+    G = fopen(INTER_FILE, "rt");
+    while (FillClient(G, &p) != -1)
+    {
+        PrintClient(F, p);
+    }
+    fclose(F);
+    fclose(G);
+    remove(INTER_FILE);
+    printf("DONE!\n");
 }
 
 
