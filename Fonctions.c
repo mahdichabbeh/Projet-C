@@ -24,7 +24,7 @@ void PrintFacture(FILE *F, facture f)
 
 int FillClient(FILE *F, client *c)
 {
-    return fscanf(F, "%lld %s %s", &(c->id), c->nom, c->prenom);
+    return fscanf(F, "%lld %s %s\n", &(c->id), c->nom, c->prenom);
 }
 
 void PrintClient(FILE *F, client c)
