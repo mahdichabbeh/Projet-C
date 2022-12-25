@@ -44,4 +44,4 @@ void DelClient();
 void DelProduct();
 int Unstock(long long int id_produit, int qte);
 
-#endif // FONCTIONS_H_INCLUDED
+#endif 
