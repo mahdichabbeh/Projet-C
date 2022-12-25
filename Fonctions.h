@@ -1,3 +1,5 @@
+#ifndef FONCTIONS_H_INCLUDED
+#define FONCTIONS_H_INCLUDED
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -40,5 +42,6 @@ void ShowBills();
 void ShowBillsByDate();
 void DelClient();
 void DelProduct();
-void Choose();
+int Unstock(long long int id_produit, int qte);
 
+#endif // FONCTIONS_H_INCLUDED

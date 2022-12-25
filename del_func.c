@@ -92,3 +92,43 @@ void DelProduct()
         printf("DONE!\n");
     }
 }
+
+
+int Unstock(long long int id_produit, int qte)
+{
+    int r_value = QteAvailable(id_produit, qte);
+    if (r_value == 1)
+    {
+        FILE *F, *G;
+        product p;
+        F = fopen(PRODUCT_FILE, "rt");
+        G = fopen(INTER_FILE, "wt");
+        while (FillProduct(F, &p) != -1)
+        {
+            if (p.code == id_produit)
+            {
+                if (p.qte > qte)
+                {
+                    p.qte -= qte;
+                    PrintProduct(G, p);
+                }
+            }
+            else
+            {
+                PrintProduct(G, p);
+            }
+        }
+        fclose(F);
+        fclose(G);
+        F = fopen(PRODUCT_FILE, "wt");
+        G = fopen(INTER_FILE, "rt");
+        while (FillProduct(G, &p) != -1)
+        {
+            PrintProduct(F, p);
+        }
+        fclose(F);
+        fclose(G);
+        remove(INTER_FILE);
+    }
+    return r_value;
+}
