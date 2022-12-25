@@ -40,4 +40,5 @@ void ShowBills();
 void ShowBillsByDate();
 void DelClient();
 void DelProduct();
+void Choose();
 
