@@ -16,3 +16,13 @@ Display the list of bills  : show the list of bills
 Show bills of a given date   : show bilss of a specific date                                 
 Exit! : quit the programme
 ![image](https://user-images.githubusercontent.com/120641695/210134573-c13e769d-e16d-48d0-b2a7-783c9ff42595.png)
+# program's shape
+We used one header file and split the source files by functionalities (add functiones , delete functions , show functions ... ) in addition to the main file 
+in addition we gave an importance to the user's experience and we made it easy to use so it can be so it can be so user friendly .
+# Used structres
+Product (code , designation , quantity)
+Client (id , nom , prenom)
+Facture (Nfacute , id_client , mois , annee)
+# Elaborated by 
+Mahdi Chabbeh
+Mohamed Karim Jegham
