@@ -20,9 +20,9 @@ Exit! : quit the programme
 We used one header file and split the source files by functionalities (add functiones , delete functions , show functions ... ) in addition to the main file 
 in addition we gave an importance to the user's experience and we made it easy to use so it can be so it can be so user friendly .
 # Used structres
-Product (code , designation , quantity)
-Client (id , nom , prenom)
+Product (code , designation , quantity) /n
+Client (id , nom , prenom) /n
 Facture (Nfacute , id_client , mois , annee)
 # Elaborated by 
-Mahdi Chabbeh
+Mahdi Chabbeh /n
 Mohamed Karim Jegham
