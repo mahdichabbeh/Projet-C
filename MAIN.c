@@ -12,22 +12,22 @@
 
 void Choose()
 {
-    printf("\nChoose an option from below _____________________\n\n");
-    printf("01 - Verify the existence of a product\n");
-    printf("02 - Verify the availability of the ordered amount\n");
-    printf("03 - Destock a specific amount of a product\n");
-    printf("04 - Show the bills of a client\n");
-    printf("05 - Add a new client\n");
-    printf("06 - Delete a client\n");
-    printf("07 - Display the list of clients\n");
-    printf("08 - Add a product\n");
-    printf("09 - Remove a product\n");
-    printf("10 - Display the list of available products\n");
-    printf("11 - Make a bill\n");
-    printf("12 - Display the list of bills\n");
-    printf("13 - Show bills of a given date\n");
-    printf("00 - Exit!\n\n");
-    printf("Enter your choice: ");
+    printf("\n               _____________________Choose an option from below _____________________\n\n");
+    printf("         *       01 - Verify the existence of a product                                         *\n");                                       
+    printf("         *       02 - Verify the availability of the ordered amount                             *\n");                           
+    printf("         *       03 - Destock a specific amount of a product                                    *\n");                                  
+    printf("         *       04 - Show the bills of a client                                                *\n");                                             
+    printf("         *       05 - Add a new client                                                          *\n");                                                        
+    printf("         *       06 - Delete a client                                                           *\n");                                                         
+    printf("         *       07 - Display the list of clients                                               *\n");                                            
+    printf("         *       08 - Add a product                                                             *\n");                                                           
+    printf("         *       09 - Remove a product                                                          *\n");                                                        
+    printf("         *       10 - Display the list of available products                                    *\n");                                  
+    printf("         *       11 - Make a bill                                                               *\n");                                                            
+    printf("         *       12 - Display the list of bills                                                 *\n");                                               
+    printf("         *       13 - Show bills of a given date                                                *\n");                                              
+    printf("         *       00 - Exit!                                                                     *\n\n");                                                                 
+    printf("                 Enter your choice :  ");
     int choice;
     scanf("%d", &choice);
     system("cls");
@@ -115,7 +115,7 @@ void Choose()
 
 int main()
 {
-    printf("                 *********** Welcome! ***********\n");
+    printf("                ******************* Welcome to the stock! *******************\n");
     Choose();
     return 0;
 }
