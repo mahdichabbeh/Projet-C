@@ -15,3 +15,4 @@ Make a bill   : make a new bill
 Display the list of bills  : show the list of bills                                   
 Show bills of a given date   : show bilss of a specific date                                 
 Exit! : quit the programme
+image.png
