@@ -15,4 +15,4 @@ Make a bill   : make a new bill
 Display the list of bills  : show the list of bills                                   
 Show bills of a given date   : show bilss of a specific date                                 
 Exit! : quit the programme
-image.png
+![image](https://user-images.githubusercontent.com/120641695/210134573-c13e769d-e16d-48d0-b2a7-783c9ff42595.png)
